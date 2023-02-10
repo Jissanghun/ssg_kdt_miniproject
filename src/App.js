@@ -6,14 +6,23 @@ import ProductList from './pages/ProductList';
 
 function App() {
   return (
-    <BrowserRouter>
+    <Container>
       <Header />
       <Routes>
-        <Route path="/" element={<Main/>} />
-        <Route path="productList" element={<ProductList />} />
+        <Route path="/" element={<Main />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/detail" element={<DetailPage />} />
+        <Route path="/cart" element={<Cart />} />
       </Routes>
-    </BrowserRouter>
+    </Container>
   );
 }
+
+const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  background-color: #f4f4f4;
+`;
 
 export default App;
